@@ -1,0 +1,45 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "My First Blog",
+  "author": "John Doe",
+  "url": "wordpress.com/JohnDoeBlog",
+  "likes": 6
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "10 SUB SPECIAL",
+  "author": "The Mincrafting Guy",
+  "url": "youtube.com/channel/wJuw7Isj91G",
+  "likes": 4
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "10 SUB SPECIAL (Reupload)",
+  "author": "The Mincrafting Guy",
+  "url": "youtube.com/channel/wJuw7Isj91G",
+  "likes": 4
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "I BEAT MINECRAFT WHILE 3 PEOPLE TRIED TO STOP ME (it was hard)",
+  "author": "The Mincrafting Guy",
+  "url": "youtube.com/channel/wJuw7Isj91G",
+  "likes": 267390
+}
+
+###
+Get http://localhost:3003/api/blogs
