@@ -44,9 +44,39 @@ const mostBlogs = (blogs)=>{
   return authorMostBlogObject
 }
 
+const mostLikes = (blogs)=>{
+  if(blogs.length===0){
+    return null
+  }
+
+  let authorLikesCount = {}
+  for(let i=0; i<blogs.length; i++){
+    if(blogs[i].author in authorLikesCount){
+      authorLikesCount[blogs[i].author] += blogs[i].likes
+    } else {
+      authorLikesCount[blogs[i].author] = blogs[i].likes
+    }
+  }
+
+  const authorMostLikes = Object.entries(authorLikesCount).reduce((most,author)=>{
+    return most[1] > author[1]
+      ? most
+      : author
+  },0)
+
+  const authorMostLikesObject = {
+    author: authorMostLikes[0],
+    likes: authorMostLikes[1]
+  }
+
+  return authorMostLikesObject
+
+}
+
 module.exports = {
   dummy,
   totalLikes,
   favoriteBlog,
-  mostBlogs
+  mostBlogs,
+  mostLikes
 }
