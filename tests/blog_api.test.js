@@ -121,6 +121,21 @@ test('when a blog with its like property is missing will have it default to 0', 
   expect(blogToView.likes).toBe(0);
 })
 
+test('sends appropriate status code when title and url is missing from blog', async ()=>{
+  const newNote = {
+    "author": "Guy Person",
+    "likes": 1
+  }
+
+  await api
+  .post('/api/blogs')
+  .send(newNote)
+  .expect(400)
+
+  const blogsAtEnd = await Blog.find({})
+  expect(blogsAtEnd).toHaveLength(initialBlogs.length)
+})
+
 afterAll(() => {
   mongoose.connection.close()
 })
