@@ -77,6 +77,29 @@ test('blogs have a unique indentifier property', async ()=>{
   expect(blogToView.id).toBeDefined();
 })
 
+test('valid blog can be added', async ()=>{
+  const newNote = {
+    "title": "I BEAT MINECRAFT WHILE 3 PEOPLE TRIED TO STOP ME (it was hard)",
+    "author": "The Mincrafting Guy",
+    "url": "youtube.com/channel/wJuw7Isj91G",
+    "likes": 267390
+  }
+
+  await api
+    .post('/api/blogs')
+    .send(newNote)
+    .expect(201)
+    .expect('Content-Type', /application\/json/)
+  
+    const blogsAtEnd = await Blog.find({})
+    expect(blogsAtEnd).toHaveLength(initialBlogs.length+1)
+
+    const titles = blogsAtEnd.map(b=>b.title)
+    expect(titles).toContain(
+      "I BEAT MINECRAFT WHILE 3 PEOPLE TRIED TO STOP ME (it was hard)"
+    )
+})
+
 afterAll(() => {
   mongoose.connection.close()
 })
