@@ -73,7 +73,8 @@ test('all blogs are returned', async ()=>{
 })
 
 test('blogs have a unique indentifier property', async ()=>{
-  const blogToView = initialBlogs[0]
+  const blogsInDB = await Blog.find({})
+  const blogToView = blogsInDB[0]
   expect(blogToView.id).toBeDefined();
 })
 
@@ -98,6 +99,26 @@ test('valid blog can be added', async ()=>{
     expect(titles).toContain(
       "I BEAT MINECRAFT WHILE 3 PEOPLE TRIED TO STOP ME (it was hard)"
     )
+})
+
+test('when a blog with its like property is missing will have it default to 0', async ()=>{
+  const newNote = {
+    "title": "10 SUB SPECIAL",
+    "author": "The Mincrafting Guy",
+    "url": "youtube.com/channel/wJuw7Isj91G",
+  }
+
+  await api
+    .post('/api/blogs')
+    .send(newNote)
+    .expect(201)
+    .expect('Content-Type', /application\/json/)
+
+  const blogsAtEnd = await Blog.find({})
+  const blogToView = blogsAtEnd[blogsAtEnd.length-1]
+  
+  expect(blogToView.likes).toBeDefined();
+  expect(blogToView.likes).toBe(0);
 })
 
 afterAll(() => {
