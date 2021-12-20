@@ -43,3 +43,17 @@ Content-Type: application/json
 
 ###
 Get http://localhost:3003/api/blogs
+
+###
+DELETE http://localhost:3003/api/blogs/61c05577232d6d33cf8b7bd1
+
+###
+Put http://localhost:3003/api/blogs/61c05577232d6d33cf8b7bd3
+Content-Type: application/json
+
+{
+  "title": "I BEAT MINECRAFT WHILE 3 PEOPLE TRIED TO STOP ME (it was hard)",
+  "author": "The Mincrafting Guy",
+  "url": "youtube.com/channel/wJuw7Isj91G",
+  "likes": 267390
+}
