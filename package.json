@@ -19,7 +19,7 @@
     "jest": "^27.4.5",
     "lodash": "^4.17.21",
     "mongoose": "^6.1.2",
-    "mongoose-unique-validator": "^3.0.0"
+    "mongoose-unique-validator": "^2.0.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
