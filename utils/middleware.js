@@ -20,11 +20,15 @@ const tokenExtractor = (request, response, next)=>{
 }
 
 const userExtractor = async (request, response, next)=>{
-  const decodedToken = jwt.verify(request.token, process.env.SECRET)
-  if(!decodedToken.id){
-    return response.status(401).json({error: 'token missing or invaild'})
+  if(request.token!=null){
+    const decodedToken = jwt.verify(request.token, process.env.SECRET)
+    if(!decodedToken.id){
+      return response.status(401).json({error: 'token missing or invaild'})
+    }
+    request.user = await User.findById(decodedToken.id)
+  } else{
+    response.status(401).send({error: 'token is null'})
   }
-  request.user = await User.findById(decodedToken.id)
 
   next()
 }  
