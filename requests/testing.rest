@@ -1,6 +1,6 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZDY2MWU1OTUyNGU0ZGIxYmJkOGIxZCIsImlhdCI6MTY0MTQ1MDM5NH0.I463uIuqEeMzK6jhwND03RWY9BwFBkoCa1_PNEB5IbQ
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZDY2MWU1OTUyNGU0ZGIxYmJkOGIxZCIsImlhdCI6MTY0MTQ1MDM5NH0.I463uIuqEeMzK6jhwND03RWY9BwFBkoCa1_PNEB5IaQ
 
 {
   "title": "My First Blog",
@@ -12,7 +12,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb
 ###
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZDY2MWU1OTUyNGU0ZGIxYmJkOGIxZCIsImlhdCI6MTY0MTQ1MDk1Mn0.-9g2adByjYOBE5lGHd5Vpkq_8yjC4iJ38rGJiQmYngQ
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZDY2MWU1OTUyNGU0ZGIxYmJkOGIxZCIsImlhdCI6MTY0MTQ1MDk1Mn0.-9g2adByjYOBE5lGHd5Vpkq_8yjC4iJ38rGJiQmYngQ
 
 {
   "title": "10 SUB SPECIAL",
@@ -47,7 +47,8 @@ Content-Type: application/json
 Get http://localhost:3003/api/blogs
 
 ###
-DELETE http://localhost:3003/api/blogs/61c05577232d6d33cf8b7bd1
+DELETE http://localhost:3003/api/blogs/61d69cfb35e0287250830462
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZDY2MWU1OTUyNGU0ZGIxYmJkOGIxZCIsImlhdCI6MTY0MTQ1NTExMX0.hjtPWS4eL2spjk7SCwsuJntmFQju1Zhz4yuU13AX8Ig
 
 ###
 Put http://localhost:3003/api/blogs/61c05577232d6d33cf8b7bd3
@@ -59,3 +60,5 @@ Content-Type: application/json
   "url": "youtube.com/channel/wJuw7Isj91G",
   "likes": 267390
 }
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZDY2MWU1OTUyNGU0ZGIxYmJkOGIxZCIsImlhdCI6MTY0MTQ1NDEwOH0.eW7pSSkhoPW3QzlPtY8QEgFEuQSNG_Dsn_XKbF72e38
