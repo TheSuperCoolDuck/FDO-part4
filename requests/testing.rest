@@ -1,6 +1,6 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZDY2MWU1OTUyNGU0ZGIxYmJkOGIxZCIsImlhdCI6MTY0MTQ1MDM5NH0.I463uIuqEeMzK6jhwND03RWY9BwFBkoCa1_PNEB5IaQ
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFub3RoZXIiLCJpZCI6IjYxZDY2OTMzMTk0ZWFhODg1ZTM4ODE4MCIsImlhdCI6MTY0MTQ1ODYwOH0.W9uFqMZSMpg-7VPhJY52AtTOoz-YdAjgyrdZ7M5deGY
 
 {
   "title": "My First Blog",
@@ -12,7 +12,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb
 ###
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZDY2MWU1OTUyNGU0ZGIxYmJkOGIxZCIsImlhdCI6MTY0MTQ1MDk1Mn0.-9g2adByjYOBE5lGHd5Vpkq_8yjC4iJ38rGJiQmYngQ
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFub3RoZXIiLCJpZCI6IjYxZDY2OTMzMTk0ZWFhODg1ZTM4ODE4MCIsImlhdCI6MTY0MTQ1NTQ3N30.TS4lbz5j7oW1reeGw_9iBKwOYYQw_rUkZ3rrYtJn9r4
 
 {
   "title": "10 SUB SPECIAL",
@@ -47,8 +47,8 @@ Content-Type: application/json
 Get http://localhost:3003/api/blogs
 
 ###
-DELETE http://localhost:3003/api/blogs/61d69cfb35e0287250830462
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZDY2MWU1OTUyNGU0ZGIxYmJkOGIxZCIsImlhdCI6MTY0MTQ1NTExMX0.hjtPWS4eL2spjk7SCwsuJntmFQju1Zhz4yuU13AX8Ig
+DELETE http://localhost:3003/api/blogs/61d6abc308df6ed461b66920
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFub3RoZXIiLCJpZCI6IjYxZDY2OTMzMTk0ZWFhODg1ZTM4ODE4MCIsImlhdCI6MTY0MTQ1ODgyM30.jEAWCS2wVYb_Wx86Ay2GX6aZmXZBUibKcdoXp3GTYuQ
 
 ###
 Put http://localhost:3003/api/blogs/61c05577232d6d33cf8b7bd3
