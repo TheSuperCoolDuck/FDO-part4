@@ -169,7 +169,7 @@ test('when a blog with its `like` property is missing will have it default to 0'
     username: 'first',
     password: 'password1'
   }
-
+ 
   const response = await api.post('/api/login').send(login)
   token = JSON.parse(response.text).token
 
